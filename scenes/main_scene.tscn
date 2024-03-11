@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://gx4xu0r2jrbx"]
+[gd_scene load_steps=5 format=3 uid="uid://gx4xu0r2jrbx"]
+
+[ext_resource type="PackedScene" uid="uid://cc34capobmor3" path="res://scenes/player.tscn" id="1_ex6yy"]
+[ext_resource type="PackedScene" uid="uid://pw864uu3k4k7" path="res://scenes/fps_counter.tscn" id="2_fnad1"]
+
+[sub_resource type="Environment" id="Environment_tv2vv"]
+background_mode = 1
+background_color = Color(0.8, 0.866667, 1, 1)
+volumetric_fog_density = 0.1237
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e8woy"]
+size = Vector2(10, 10)
 
 [node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tv2vv")
+
+[node name="Player" parent="." instance=ExtResource("1_ex6yy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13543, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+use_collision = true
+mesh = SubResource("PlaneMesh_e8woy")
+
+[node name="FPSCounter" parent="." instance=ExtResource("2_fnad1")]
