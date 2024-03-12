@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://gx4xu0r2jrbx"]
 
 [ext_resource type="PackedScene" uid="uid://cc34capobmor3" path="res://scenes/player.tscn" id="1_ex6yy"]
-[ext_resource type="PackedScene" uid="uid://pw864uu3k4k7" path="res://scenes/fps_counter.tscn" id="2_fnad1"]
+[ext_resource type="PackedScene" uid="uid://b2kxd13iomvfp" path="res://assets/3D/player_model.blend" id="3_2we03"]
 
 [sub_resource type="Environment" id="Environment_tv2vv"]
 background_mode = 1
@@ -23,4 +23,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13543, 0)
 use_collision = true
 mesh = SubResource("PlaneMesh_e8woy")
 
-[node name="FPSCounter" parent="." instance=ExtResource("2_fnad1")]
+[node name="player_model" parent="." instance=ExtResource("3_2we03")]
+transform = Transform3D(-0.270106, 0, -0.0516524, 0, 0.275, 0, 0.0516524, 0, -0.270106, 0.13132, 0.79294, 2.88189)
+
+[node name="player_model2" parent="." instance=ExtResource("3_2we03")]
+transform = Transform3D(-0.229604, 0, 0.15135, 0, 0.275, 0, -0.15135, 0, -0.229604, -2.78274, 0.79294, 2.88189)
