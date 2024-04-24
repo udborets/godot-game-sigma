@@ -44,6 +44,20 @@ func _input(event):
 		head.rotate_x(-event.relative.y * mouse_sens)
 		head.rotation.x = clamp(head.rotation.x, -1.2, 1.2)
 
+
+func __get_abs_zeros(direction: Vector3):
+	if abs(direction.x) < 0.01:
+		direction.x = 0
+	
+	if abs(direction.y) < 0.01:
+		direction.y = 0
+	
+	if abs(direction.z) < 0.01:
+		direction.z = 0
+	
+	return direction
+
+
 func _physics_process(delta):
 	
 	#HANDLE MOVEMENT STATE
@@ -80,6 +94,7 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_stop_speed)
+	direction = __get_abs_zeros(direction)
 	print(direction)
 	if direction:
 		velocity.x = direction.x * current_speed
