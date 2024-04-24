@@ -6,7 +6,7 @@ func _on_play_button_pressed():
 
 
 func _on_options_button_pressed():
-	pass # Replace with function body.
+	print("YURAAA LOOOH")
 
 
 
