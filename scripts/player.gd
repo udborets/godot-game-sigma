@@ -12,8 +12,8 @@ extends CharacterBody3D
 
 var current_speed: float = 4.0
 @export var walking_speed: float = 3.0
-@export var sprinting_speed: float = 6.0
-@export var crouching_speed: float = 3.0
+@export var sprinting_speed: float = 5.0
+@export var crouching_speed: float = 2.0
 
 #MOVEMENT VARS
 
@@ -25,7 +25,6 @@ var lerp_head_speed: float = 10.0
 var crouching_depth: float = -0.5
 
 var direction: Vector3 = Vector3.ZERO
-
 var default_head_position: float
 
 #INPUT VARS
@@ -85,9 +84,8 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
-		head.position.y = lerp(head.position.y, default_head_position + 0.1 * sin(Time.get_ticks_msec() / 70), delta * lerp_head_speed)
+		head.position.y = lerp(head.position.y, head.position.y + 0.1 * sin(current_speed / 400 * Time.get_ticks_msec()), delta * lerp_head_speed)
 	else:
-		head.position.y = default_head_position
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 
