@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc34capobmor3"]
+[gd_scene load_steps=5 format=3 uid="uid://cc34capobmor3"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5qfnv"]
+[ext_resource type="PackedScene" uid="uid://bobbeexbmk28b" path="res://assets/3D/player_model_reworked.fbx" id="2_umqkr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0tj0j"]
 height = 1.8
@@ -23,10 +24,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-light_energy = 0.5
-shadow_enabled = true
-omni_range = 2.0
-
 [node name="StandingRay" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0.9, 0)
+
+[node name="Root Scene" parent="." instance=ExtResource("2_umqkr")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.864478, 0)

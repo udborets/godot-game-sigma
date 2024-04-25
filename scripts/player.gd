@@ -45,43 +45,19 @@ func _input(event):
 		head.rotation.x = clamp(head.rotation.x, -1.2, 1.2)
 
 
-func __get_abs_zeros(direction: Vector3):
-	if abs(direction.x) < 0.01:
-		direction.x = 0
+func __get_vector_abs_zeros(vector: Vector3):
+	if abs(vector.x) < 0.01:
+		vector.x = 0
 	
-	if abs(direction.y) < 0.01:
-		direction.y = 0
+	if abs(vector.y) < 0.01:
+		vector.y = 0
 	
-	if abs(direction.z) < 0.01:
-		direction.z = 0
+	if abs(vector.z) < 0.01:
+		vector.z = 0
 	
-	return direction
+	return vector
 
-
-func _physics_process(delta):
-	
-	#HANDLE MOVEMENT STATE
-	if Input.is_action_pressed("crouch"):
-		#crouching
-		
-		head.position.y = lerp(head.position.y, 0.6 + crouching_depth, delta * lerp_head_speed)
-		current_speed = crouching_speed
-		standing_shape.disabled = true
-		crouching_shape.disabled = false
-
-	elif !standing_ray.is_colliding():
-		#standing
-		standing_shape.disabled = false
-		crouching_shape.disabled = true
-		head.position.y = lerp(head.position.y, 0.6, delta * lerp_head_speed)
-		
-		#HANDLE SPRINTING
-		if Input.is_action_pressed("sprint"):
-			#sprinting
-			current_speed = sprinting_speed
-		else:
-			current_speed = walking_speed
-	
+func handle_movement(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -94,8 +70,7 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_stop_speed)
-	direction = __get_abs_zeros(direction)
-	print(direction)
+	direction = __get_vector_abs_zeros(direction)
 	if direction:
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
@@ -105,3 +80,29 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 
 	move_and_slide()
+
+func handle_movement_state(delta):
+	#HANDLE SPRINTING
+	if Input.is_action_pressed("sprint"):
+	#sprinting
+		current_speed = sprinting_speed
+	else:
+		current_speed = walking_speed
+		
+	#HANDLE MOVEMENT STATE
+	if Input.is_action_pressed("crouch"):
+		#crouching
+		head.position.y = lerp(head.position.y, 0.6 + crouching_depth, delta * lerp_head_speed)
+		current_speed = crouching_speed
+		standing_shape.disabled = true
+		crouching_shape.disabled = false
+
+	elif !standing_ray.is_colliding():
+		#standing
+		standing_shape.disabled = false
+		crouching_shape.disabled = true
+		head.position.y = lerp(head.position.y, 0.6, delta * lerp_head_speed)
+
+func _physics_process(delta):
+	handle_movement_state(delta)
+	handle_movement(delta)
