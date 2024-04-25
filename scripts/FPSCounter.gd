@@ -9,3 +9,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$TextEdit.text = "FPS: " + str(int(1 / delta))
+	if Input.is_action_just_pressed("escape"):
+		get_tree().quit()

@@ -7,11 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://ff4mcee4om3c" path="res://assets/3D/player_model_reworked.blend" id="4_5x8li"]
 
 [sub_resource type="Environment" id="Environment_tv2vv"]
+tonemap_mode = 2
 sdfgi_enabled = true
-sdfgi_use_occlusion = true
 glow_enabled = true
 glow_normalized = true
+glow_blend_mode = 0
 volumetric_fog_enabled = true
+volumetric_fog_density = 0.2395
+volumetric_fog_albedo = Color(0.820175, 0.700578, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkary"]
 albedo_texture = ExtResource("2_d35m7")
@@ -48,3 +51,6 @@ transform = Transform3D(-0.770502, 0, 0.637437, 0, 1, 0, -0.637437, 0, -0.770502
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.81646, -0.362532, 0.449403, -0.577402, -0.512629, 0.635467, 0, -0.77832, -0.627868, 0, 3.70315, 0)
 shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 21.6
+directional_shadow_pancake_size = 9.3
