@@ -1,14 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://gx4xu0r2jrbx"]
+[gd_scene load_steps=9 format=3 uid="uid://gx4xu0r2jrbx"]
 
 [ext_resource type="PackedScene" uid="uid://cc34capobmor3" path="res://scenes/player.tscn" id="1_ex6yy"]
+[ext_resource type="Texture2D" uid="uid://cpo50chrai45w" path="res://assets/sand.png" id="2_d35m7"]
 [ext_resource type="PackedScene" uid="uid://b2kxd13iomvfp" path="res://assets/3D/player_model.blend" id="3_2we03"]
 [ext_resource type="PackedScene" uid="uid://bobbeexbmk28b" path="res://assets/3D/player_model_reworked.fbx" id="3_ag3kw"]
 [ext_resource type="PackedScene" uid="uid://ff4mcee4om3c" path="res://assets/3D/player_model_reworked.blend" id="4_5x8li"]
 
 [sub_resource type="Environment" id="Environment_tv2vv"]
-background_mode = 1
-background_color = Color(0.8, 0.866667, 1, 1)
-volumetric_fog_density = 0.1237
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_blend_mode = 0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.2395
+volumetric_fog_albedo = Color(0.820175, 0.700578, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkary"]
+albedo_texture = ExtResource("2_d35m7")
+uv1_scale = Vector3(5, 5, 5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_e8woy"]
 size = Vector2(10, 10)
@@ -22,6 +32,7 @@ environment = SubResource("Environment_tv2vv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13543, 0)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+material_override = SubResource("StandardMaterial3D_mkary")
 use_collision = true
 mesh = SubResource("PlaneMesh_e8woy")
 
@@ -36,3 +47,10 @@ transform = Transform3D(-0.98336, 0, 0.181669, 0, 1, 0, -0.181669, 0, -0.98336, 
 
 [node name="player_model_reworked" parent="." instance=ExtResource("4_5x8li")]
 transform = Transform3D(-0.770502, 0, 0.637437, 0, 1, 0, -0.637437, 0, -0.770502, -3.6108, 0, 1.43176)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.81646, -0.362532, 0.449403, -0.577402, -0.512629, 0.635467, 0, -0.77832, -0.627868, 0, 3.70315, 0)
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 21.6
+directional_shadow_pancake_size = 9.3
