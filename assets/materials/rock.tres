@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cuvj2asr5co1n"]
+
+[ext_resource type="Texture2D" uid="uid://bu4jqglvd6lyl" path="res://assets/textures/Rock030_1K-PNG_Color.png" id="1_esd27"]
+[ext_resource type="Texture2D" uid="uid://dc8w2qhw2wyaq" path="res://assets/textures/Rock030_1K-PNG_AmbientOcclusion.png" id="2_mal3g"]
+[ext_resource type="Texture2D" uid="uid://bqgdgg0vm3c71" path="res://assets/textures/Rock030_1K-PNG_Displacement.png" id="3_qox6e"]
+[ext_resource type="Texture2D" uid="uid://d1frvvcetmk40" path="res://assets/textures/Rock030_1K-PNG_NormalGL.png" id="4_b8egi"]
+[ext_resource type="Texture2D" uid="uid://dw5hqqqp67j3x" path="res://assets/textures/Rock030_1K-PNG_Roughness.png" id="5_rered"]
+
+[resource]
+albedo_texture = ExtResource("1_esd27")
+roughness_texture = ExtResource("5_rered")
+normal_enabled = true
+normal_texture = ExtResource("4_b8egi")
+ao_texture = ExtResource("2_mal3g")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_qox6e")
+uv1_scale = Vector3(8, 8, 8)
+grow_amount = 1.741
+distance_fade_min_distance = 20.0

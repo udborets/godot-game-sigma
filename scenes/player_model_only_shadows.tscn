@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds133l5tripxa"]
 
-[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://assets/3D/models/player_model_rigged.fbx" id="1_f6yrj"]
+[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://assets/3D/models/fbx/player_model_rigged.fbx" id="1_f6yrj"]
 
 [node name="PlayerAnimated" instance=ExtResource("1_f6yrj")]
 

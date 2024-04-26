@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://gx4xu0r2jrbx"]
+[gd_scene load_steps=6 format=3 uid="uid://gx4xu0r2jrbx"]
 
 [ext_resource type="PackedScene" uid="uid://cc34capobmor3" path="res://scenes/player.tscn" id="1_ex6yy"]
-[ext_resource type="Texture2D" uid="uid://cpo50chrai45w" path="res://assets/textures/sand.png" id="2_d35m7"]
+[ext_resource type="Material" uid="uid://cuvj2asr5co1n" path="res://assets/materials/rock.tres" id="2_mp1lv"]
 [ext_resource type="PackedScene" uid="uid://bdahtswbs0fy1" path="res://scenes/player_animated.tscn" id="3_ikdt2"]
 
 [sub_resource type="Environment" id="Environment_tv2vv"]
@@ -14,12 +14,8 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.1
 volumetric_fog_albedo = Color(0.820175, 0.700578, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkary"]
-albedo_texture = ExtResource("2_d35m7")
-uv1_scale = Vector3(5, 5, 5)
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_e8woy"]
-size = Vector2(10, 10)
+size = Vector2(50, 50)
 
 [node name="MainScene" type="Node3D"]
 
@@ -30,9 +26,9 @@ environment = SubResource("Environment_tv2vv")
 transform = Transform3D(-0.461609, 0, -0.887083, 0, 1, 0, 0.887083, 0, -0.461609, 0, 1.13543, 0)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-material_override = SubResource("StandardMaterial3D_mkary")
 use_collision = true
 mesh = SubResource("PlaneMesh_e8woy")
+material = ExtResource("2_mp1lv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.81646, -0.362532, 0.449403, -0.577402, -0.512629, 0.635467, 0, -0.77832, -0.627868, 0, 3.70315, 0)
