@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cc34capobmor3"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_5qfnv"]
-[ext_resource type="PackedScene" uid="uid://bobbeexbmk28b" path="res://assets/3D/player_model_reworked.fbx" id="2_umqkr"]
+[ext_resource type="PackedScene" uid="uid://ds133l5tripxa" path="res://scenes/player_model_only_shadows.tscn" id="2_50m50"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0tj0j"]
 height = 1.8
@@ -27,5 +27,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 [node name="StandingRay" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0.9, 0)
 
-[node name="Root Scene" parent="." instance=ExtResource("2_umqkr")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.940174, 0)
+[node name="Root Scene" parent="." instance=ExtResource("2_50m50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9, 0)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds133l5tripxa"]
+
+[ext_resource type="PackedScene" uid="uid://bobbeexbmk28b" path="res://assets/3D/player_model_reworked.fbx" id="1_xqkeo"]
+
+[node name="Root Scene" instance=ExtResource("1_xqkeo")]
+
+[node name="Cube" parent="RootNode" index="0"]
+cast_shadow = 3
+
+[node name="Cube_002" parent="RootNode" index="1"]
+cast_shadow = 3
+
+[node name="Cube_003" parent="RootNode" index="2"]
+cast_shadow = 3
