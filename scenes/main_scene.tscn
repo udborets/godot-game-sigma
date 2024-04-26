@@ -1,10 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://gx4xu0r2jrbx"]
+[gd_scene load_steps=7 format=3 uid="uid://gx4xu0r2jrbx"]
 
 [ext_resource type="PackedScene" uid="uid://cc34capobmor3" path="res://scenes/player.tscn" id="1_ex6yy"]
 [ext_resource type="Texture2D" uid="uid://cpo50chrai45w" path="res://assets/textures/sand.png" id="2_d35m7"]
-[ext_resource type="PackedScene" uid="uid://b2kxd13iomvfp" path="res://assets/3D/models/player_model.blend" id="3_2we03"]
-[ext_resource type="PackedScene" uid="uid://bobbeexbmk28b" path="res://assets/3D/models/player_model_reworked.fbx" id="3_ag3kw"]
-[ext_resource type="PackedScene" uid="uid://ff4mcee4om3c" path="res://assets/3D/models/player_model_reworked.blend" id="4_5x8li"]
+[ext_resource type="PackedScene" uid="uid://bdahtswbs0fy1" path="res://scenes/player_animated.tscn" id="3_ikdt2"]
 
 [sub_resource type="Environment" id="Environment_tv2vv"]
 tonemap_mode = 2
@@ -36,21 +34,18 @@ material_override = SubResource("StandardMaterial3D_mkary")
 use_collision = true
 mesh = SubResource("PlaneMesh_e8woy")
 
-[node name="player_model" parent="." instance=ExtResource("3_2we03")]
-transform = Transform3D(-0.270106, 0, -0.0516524, 0, 0.275, 0, 0.0516524, 0, -0.270106, 0.13132, 0.79294, 2.88189)
-
-[node name="player_model2" parent="." instance=ExtResource("3_2we03")]
-transform = Transform3D(-0.229604, 0, 0.15135, 0, 0.275, 0, -0.15135, 0, -0.229604, -2.78274, 0.79294, 2.88189)
-
-[node name="Root Scene" parent="." instance=ExtResource("3_ag3kw")]
-transform = Transform3D(-0.98336, 0, 0.181669, 0, 1, 0, -0.181669, 0, -0.98336, -1.51082, 0, 2.91081)
-
-[node name="player_model_reworked" parent="." instance=ExtResource("4_5x8li")]
-transform = Transform3D(-0.770502, 0, 0.637437, 0, 1, 0, -0.637437, 0, -0.770502, -3.6108, 0, 1.43176)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.81646, -0.362532, 0.449403, -0.577402, -0.512629, 0.635467, 0, -0.77832, -0.627868, 0, 3.70315, 0)
 shadow_enabled = true
 shadow_bias = 0.195
 directional_shadow_mode = 1
 directional_shadow_pancake_size = 0.0
+
+[node name="PlayerAnimated" parent="." instance=ExtResource("3_ikdt2")]
+transform = Transform3D(-0.732709, 0, 0.680542, 0, 1, 0, -0.680542, 0, -0.732709, -2.94554, 0, 3.5912)
+
+[node name="PlayerAnimated2" parent="." instance=ExtResource("3_ikdt2")]
+transform = Transform3D(0.67676, 0, 0.736203, 0, 1, 0, -0.736203, 0, 0.67676, -1.90292, 0, -2.34888)
+
+[node name="PlayerAnimated3" parent="." instance=ExtResource("3_ikdt2")]
+transform = Transform3D(0.716022, 0, -0.698078, 0, 1, 0, 0.698078, 0, 0.716022, 0.500292, 0, -2.34888)
