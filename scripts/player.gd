@@ -21,11 +21,12 @@ const JUMP_VELOCITY = 4.5
 
 var lerp_stop_speed: float = 50.0
 var lerp_head_speed: float = 10.0
+var head_movement_walking: float = 0.05
+var head_freq_walking: float = 300
 
 var crouching_depth: float = -0.5
 
 var direction: Vector3 = Vector3.ZERO
-var default_head_position: float
 
 #INPUT VARS
 
@@ -36,7 +37,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	default_head_position = head.position.y
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -75,7 +75,7 @@ func handle_movement(delta):
 		animation_player.play("Walk")
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
-		head.position.y = lerp(head.position.y, head.position.y + 0.1 * sin(current_speed / 400 * Time.get_ticks_msec()), delta * lerp_head_speed)
+		head.position.y = lerp(head.position.y, head.position.y + head_movement_walking * sin(current_speed / head_freq_walking * Time.get_ticks_msec()), delta * lerp_head_speed)
 	else:
 		animation_player.play("HappyIdle")
 		velocity.x = move_toward(velocity.x, 0, current_speed)
