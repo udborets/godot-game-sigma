@@ -6,7 +6,7 @@ extends CharacterBody3D
 @onready var standing_shape = $StandingShape
 @onready var crouching_shape = $CrouchingShape
 @onready var standing_ray = $StandingRay
-
+@onready var animation_player = $PlayerAnimated/AnimationPlayer
 
 #SPEED VARS
 
@@ -72,10 +72,12 @@ func handle_movement(delta):
 	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta * lerp_stop_speed)
 	direction = __get_vector_abs_zeros(direction)
 	if direction:
+		animation_player.play("Walk")
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
 		head.position.y = lerp(head.position.y, head.position.y + 0.1 * sin(current_speed / 400 * Time.get_ticks_msec()), delta * lerp_head_speed)
 	else:
+		animation_player.play("HappyIdle")
 		velocity.x = move_toward(velocity.x, 0, current_speed)
 		velocity.z = move_toward(velocity.z, 0, current_speed)
 

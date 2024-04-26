@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ff4mcee4om3c"
-path="res://.godot/imported/player_model_reworked.blend-19a76a9b1c19dc6ef8f195212edb5fba.scn"
+uid="uid://b2kxd13iomvfp"
+path="res://.godot/imported/player_model.blend-29edf67ce4f1bf46d4f03349a7200913.scn"
 
 [deps]
 
-source_file="res://assets/3D/player_model_reworked.blend"
-dest_files=["res://.godot/imported/player_model_reworked.blend-19a76a9b1c19dc6ef8f195212edb5fba.scn"]
+source_file="res://assets/3D/models/player_model.blend"
+dest_files=["res://.godot/imported/player_model.blend-29edf67ce4f1bf46d4f03349a7200913.scn"]
 
 [params]
 
@@ -29,22 +29,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"materials": {
-"ImphenziaPixPal": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/materials/main_material.tres"
-}
-},
-"nodes": {
-"PATH:Cube_001": {
-"import/skip_import": true
-},
-"PATH:Point": {
-"import/skip_import": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

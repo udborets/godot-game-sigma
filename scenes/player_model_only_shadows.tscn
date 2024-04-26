@@ -1,14 +1,31 @@
 [gd_scene load_steps=2 format=3 uid="uid://ds133l5tripxa"]
 
-[ext_resource type="PackedScene" uid="uid://bobbeexbmk28b" path="res://assets/3D/player_model_reworked.fbx" id="1_xqkeo"]
+[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://assets/3D/models/player_model_rigged.fbx" id="1_f6yrj"]
 
-[node name="Root Scene" instance=ExtResource("1_xqkeo")]
+[node name="PlayerAnimated" instance=ExtResource("1_f6yrj")]
 
-[node name="Cube" parent="RootNode" index="0"]
-cast_shadow = 3
+[node name="Skeleton3D" parent="RootNode/Armature" index="0"]
+bones/0/position = Vector3(-0.0397618, 0.869766, 0.00223733)
+bones/0/rotation = Quaternion(0.0169907, 0.706699, 0.706595, -0.0318006)
+bones/1/rotation = Quaternion(0.703738, -0.00546628, -0.00875602, 0.710384)
+bones/2/rotation = Quaternion(0.0348929, -0.00216802, -0.0038275, 0.999381)
+bones/3/rotation = Quaternion(0.0349044, -0.00203551, -0.0038508, 0.999381)
+bones/4/rotation = Quaternion(-0.685874, -0.00151935, -0.000934236, 0.727719)
+bones/5/rotation = Quaternion(0.0829323, 0.0128082, -0.0541387, 0.995001)
+bones/8/rotation = Quaternion(0.597068, -0.35023, 0.596185, 0.406709)
+bones/9/rotation = Quaternion(0.444965, 0.164689, 0.0664363, 0.877764)
+bones/10/rotation = Quaternion(0.000247379, -6.92884e-06, 0.0773182, 0.997007)
+bones/13/rotation = Quaternion(0.634929, 0.316464, -0.591034, 0.38392)
+bones/14/rotation = Quaternion(0.405498, 0.0163507, 0.0525976, 0.912435)
+bones/15/rotation = Quaternion(-4.55421e-05, 8.36259e-06, -0.132826, 0.991139)
+bones/18/rotation = Quaternion(-0.0957189, 0.710116, -0.697419, 0.0134003)
+bones/19/rotation = Quaternion(0.100717, -0.0146538, 0.0358046, 0.994163)
+bones/20/rotation = Quaternion(-0.000493214, 0.867973, -0.495455, 0.033862)
+bones/21/rotation = Quaternion(0.312787, -0.0627636, 0.020684, 0.947522)
+bones/24/rotation = Quaternion(0.112645, 0.707767, -0.697134, -0.0195005)
+bones/25/rotation = Quaternion(0.135198, 0.0529101, -0.0267513, 0.989043)
+bones/26/rotation = Quaternion(0.000557045, 0.859788, -0.509518, -0.033999)
+bones/27/rotation = Quaternion(0.341694, 0.0609703, -0.0214239, 0.937587)
 
-[node name="Cube_002" parent="RootNode" index="1"]
-cast_shadow = 3
-
-[node name="Cube_003" parent="RootNode" index="2"]
+[node name="Cube" parent="RootNode/Armature/Skeleton3D" index="0"]
 cast_shadow = 3
