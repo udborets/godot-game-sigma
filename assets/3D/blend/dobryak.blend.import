@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ff4mcee4om3c"
-path="res://.godot/imported/player_model_reworked.blend-2a5f9f617d5d8571e24027a00b1336c2.scn"
+uid="uid://xcg13gg7i6fb"
+path="res://.godot/imported/dobryak.blend-9188a458fe69ff888ec02f92b9868389.scn"
 
 [deps]
 
-source_file="res://assets/3D/models/blend/player_model_reworked.blend"
-dest_files=["res://.godot/imported/player_model_reworked.blend-2a5f9f617d5d8571e24027a00b1336c2.scn"]
+source_file="res://assets/3D/blend/dobryak.blend"
+dest_files=["res://.godot/imported/dobryak.blend-9188a458fe69ff888ec02f92b9868389.scn"]
 
 [params]
 
@@ -29,22 +29,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"materials": {
-"ImphenziaPixPal": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/materials/main_material.tres"
-}
-},
-"nodes": {
-"PATH:Cube_001": {
-"import/skip_import": true
-},
-"PATH:Point": {
-"import/skip_import": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

@@ -24,6 +24,17 @@ FpsCounter="*res://scenes/fps_counter.tscn"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "yellow",
+"res://assets/": "green",
+"res://godot-game-sigma/": "pink",
+"res://resources/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "blue"
+}
+
 [input]
 
 crouch={

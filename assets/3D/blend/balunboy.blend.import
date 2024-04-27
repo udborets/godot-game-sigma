@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b2kxd13iomvfp"
-path="res://.godot/imported/player_model.blend-f3273d4b6fae03b6d08258b379433457.scn"
+uid="uid://de8q5yxmgb32f"
+path="res://.godot/imported/balunboy.blend-fc3c3d40af7c270303c44cf05f3d57ff.scn"
 
 [deps]
 
-source_file="res://assets/3D/models/blend/player_model.blend"
-dest_files=["res://.godot/imported/player_model.blend-f3273d4b6fae03b6d08258b379433457.scn"]
+source_file="res://assets/3D/blend/balunboy.blend"
+dest_files=["res://.godot/imported/balunboy.blend-fc3c3d40af7c270303c44cf05f3d57ff.scn"]
 
 [params]
 

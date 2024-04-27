@@ -1,34 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds133l5tripxa"]
+[gd_scene load_steps=3 format=3 uid="uid://ds133l5tripxa"]
 
-[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://assets/3D/models/fbx/player_model_rigged.fbx" id="1_f6yrj"]
+[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://resources/fbx/player_model_rigged.fbx" id="1_f6yrj"]
+[ext_resource type="Material" uid="uid://qd5kltiujtnn" path="res://resources/materials/main_material.tres" id="2_gbcj8"]
 
 [node name="PlayerAnimated" instance=ExtResource("1_f6yrj")]
 
 [node name="Skeleton3D" parent="RootNode/Armature" index="0"]
-bones/0/position = Vector3(-0.00808686, 0.868493, 0.000710787)
-bones/0/rotation = Quaternion(0.0263159, 0.708635, 0.704767, -0.0211795)
-bones/1/rotation = Quaternion(0.701893, -0.0115292, -0.00446572, 0.712175)
-bones/2/rotation = Quaternion(0.0342004, -0.00192701, -0.00474718, 0.999402)
-bones/3/rotation = Quaternion(0.0341975, -0.00185309, -0.00478321, 0.999402)
-bones/4/rotation = Quaternion(-0.686929, -0.00128318, -0.00291238, 0.726718)
-bones/5/rotation = Quaternion(0.075985, 0.0204917, -0.0638676, 0.99485)
-bones/8/rotation = Quaternion(0.594447, -0.35334, 0.596066, 0.40803)
-bones/9/rotation = Quaternion(0.438255, 0.179238, 0.0780656, 0.877333)
-bones/10/rotation = Quaternion(0.000283572, -6.11233e-06, 0.0885815, 0.996069)
-bones/13/rotation = Quaternion(0.63921, 0.310486, -0.592546, 0.379339)
-bones/14/rotation = Quaternion(0.413578, 0.0173288, 0.0594564, 0.90836)
-bones/15/rotation = Quaternion(-4.44558e-05, 8.03011e-06, -0.128585, 0.991699)
-bones/18/rotation = Quaternion(-0.0903033, 0.719751, -0.688241, 0.0113075)
-bones/19/rotation = Quaternion(0.137833, -0.0224966, 0.033221, 0.989643)
-bones/20/rotation = Quaternion(0.00559415, 0.854733, -0.518129, 0.0307113)
-bones/21/rotation = Quaternion(0.315156, -0.0629044, 0.0206289, 0.946728)
-bones/24/rotation = Quaternion(0.117896, 0.692682, -0.711202, -0.0219931)
-bones/25/rotation = Quaternion(0.0926787, 0.0448673, -0.029045, 0.994261)
-bones/26/rotation = Quaternion(0.00417167, 0.871684, -0.488761, -0.0355433)
-bones/27/rotation = Quaternion(0.325463, 0.0629171, -0.0202905, 0.943241)
+bones/0/position = Vector3(-0.00140705, 0.867772, -0.00521835)
+bones/0/rotation = Quaternion(0.0364458, 0.712534, 0.700341, -0.0221435)
+bones/1/rotation = Quaternion(0.698214, -0.0126237, 0.0099968, 0.715708)
+bones/2/rotation = Quaternion(0.0335192, 0.000526976, 0.000898031, 0.999438)
+bones/3/rotation = Quaternion(0.0335181, 0.000749226, 0.000914677, 0.999437)
+bones/4/rotation = Quaternion(-0.68814, -0.00453858, 0.000755115, 0.725563)
+bones/5/rotation = Quaternion(0.0672126, -0.0783131, -0.0499323, 0.993406)
+bones/8/rotation = Quaternion(0.604647, -0.33913, 0.599175, 0.400478)
+bones/9/rotation = Quaternion(0.411746, 0.166635, 0.0701187, 0.893186)
+bones/10/rotation = Quaternion(0.000246024, -6.98244e-06, 0.076907, 0.997038)
+bones/13/rotation = Quaternion(0.622482, 0.330903, -0.595607, 0.385061)
+bones/14/rotation = Quaternion(0.443935, 0.0105646, 0.056789, 0.894195)
+bones/15/rotation = Quaternion(-4.32671e-05, 7.69074e-06, -0.125259, 0.992124)
+bones/18/rotation = Quaternion(-0.0901923, 0.7262, -0.681495, 0.00796073)
+bones/19/rotation = Quaternion(0.162055, -0.0146721, 0.0300786, 0.986214)
+bones/20/rotation = Quaternion(0.012046, 0.843074, -0.536989, 0.0269002)
+bones/21/rotation = Quaternion(0.312489, -0.0626703, 0.020666, 0.947626)
+bones/24/rotation = Quaternion(0.116868, 0.686956, -0.716884, -0.0225948)
+bones/25/rotation = Quaternion(0.090612, 0.0535418, -0.0308846, 0.993966)
+bones/26/rotation = Quaternion(0.001514, 0.866702, -0.497645, -0.0342852)
+bones/27/rotation = Quaternion(0.313281, 0.061803, -0.0204361, 0.947427)
 
 [node name="Cube" parent="RootNode/Armature/Skeleton3D" index="0"]
 cast_shadow = 3
+surface_material_override/0 = ExtResource("2_gbcj8")
+
+[node name="Cube_002" parent="RootNode/Armature/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("2_gbcj8")
+
+[node name="Cube_003" parent="RootNode/Armature/Skeleton3D" index="2"]
+surface_material_override/0 = ExtResource("2_gbcj8")
 
 [node name="AnimationPlayer" parent="." index="1"]
 playback_default_blend_time = 0.5

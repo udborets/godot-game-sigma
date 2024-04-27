@@ -1,12 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdahtswbs0fy1"]
+[gd_scene load_steps=3 format=3 uid="uid://bdahtswbs0fy1"]
 
-[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://assets/3D/models/fbx/player_model_rigged.fbx" id="1_npbie"]
+[ext_resource type="PackedScene" uid="uid://etwyft7qo4sn" path="res://resources/fbx/player_model_rigged.fbx" id="1_npbie"]
+[ext_resource type="Material" uid="uid://qd5kltiujtnn" path="res://resources/materials/main_material.tres" id="2_50lmv"]
 
 [node name="PlayerAnimated" instance=ExtResource("1_npbie")]
 
 [node name="Skeleton3D" parent="RootNode/Armature" index="0"]
 bones/0/position = Vector3(-0.00140705, 0.867772, -0.00521835)
-bones/0/rotation = Quaternion(0.0364459, 0.712534, 0.700341, -0.0221436)
+bones/0/rotation = Quaternion(0.0364458, 0.712534, 0.700341, -0.0221435)
 bones/1/rotation = Quaternion(0.698214, -0.0126237, 0.0099968, 0.715708)
 bones/2/rotation = Quaternion(0.0335192, 0.000526976, 0.000898031, 0.999438)
 bones/3/rotation = Quaternion(0.0335181, 0.000749226, 0.000914677, 0.999437)
@@ -26,6 +27,15 @@ bones/24/rotation = Quaternion(0.116868, 0.686956, -0.716884, -0.0225948)
 bones/25/rotation = Quaternion(0.090612, 0.0535418, -0.0308846, 0.993966)
 bones/26/rotation = Quaternion(0.001514, 0.866702, -0.497645, -0.0342852)
 bones/27/rotation = Quaternion(0.313281, 0.061803, -0.0204361, 0.947427)
+
+[node name="Cube" parent="RootNode/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_50lmv")
+
+[node name="Cube_002" parent="RootNode/Armature/Skeleton3D" index="1"]
+surface_material_override/0 = ExtResource("2_50lmv")
+
+[node name="Cube_003" parent="RootNode/Armature/Skeleton3D" index="2"]
+surface_material_override/0 = ExtResource("2_50lmv")
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "HappyIdle"

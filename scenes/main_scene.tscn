@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://gx4xu0r2jrbx"]
 
 [ext_resource type="PackedScene" uid="uid://cc34capobmor3" path="res://scenes/player.tscn" id="1_ex6yy"]
-[ext_resource type="Material" uid="uid://cuvj2asr5co1n" path="res://assets/materials/rock.tres" id="2_mp1lv"]
+[ext_resource type="Material" uid="uid://cuvj2asr5co1n" path="res://resources/materials/rock.tres" id="2_mp1lv"]
 [ext_resource type="PackedScene" uid="uid://bdahtswbs0fy1" path="res://scenes/player_animated.tscn" id="3_ikdt2"]
 
 [sub_resource type="Environment" id="Environment_tv2vv"]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://xcg13gg7i6fb"
-path="res://.godot/imported/dobryak.blend-a3aeb8dbabd9cd55b63ac2521893aea2.scn"
+uid="uid://bfhjkbstiybyp"
+path="res://.godot/imported/monster.blend-aeb831f0b5c43b6af32b8f487a2c8a1c.scn"
 
 [deps]
 
-source_file="res://assets/3D/models/blend/dobryak.blend"
-dest_files=["res://.godot/imported/dobryak.blend-a3aeb8dbabd9cd55b63ac2521893aea2.scn"]
+source_file="res://assets/3D/blend/monster.blend"
+dest_files=["res://.godot/imported/monster.blend-aeb831f0b5c43b6af32b8f487a2c8a1c.scn"]
 
 [params]
 

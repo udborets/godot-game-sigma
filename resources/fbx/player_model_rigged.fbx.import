@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://etwyft7qo4sn"
-path="res://.godot/imported/player_model_rigged.fbx-4d01b51a03838ca4325e5d04557cda42.scn"
+path="res://.godot/imported/player_model_rigged.fbx-7a410b5bb8eead737d3d4d2d0a15ac49.scn"
 
 [deps]
 
-source_file="res://assets/3D/models/fbx/player_model_rigged.fbx"
-dest_files=["res://.godot/imported/player_model_rigged.fbx-4d01b51a03838ca4325e5d04557cda42.scn"]
+source_file="res://resources/fbx/player_model_rigged.fbx"
+dest_files=["res://.godot/imported/player_model_rigged.fbx-7a410b5bb8eead737d3d4d2d0a15ac49.scn"]
 
 [params]
 

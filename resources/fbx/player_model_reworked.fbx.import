@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bobbeexbmk28b"
-path="res://.godot/imported/player_model_reworked.fbx-dca7ddba6dc4e0d58c33f2de033ef32f.scn"
+path="res://.godot/imported/player_model_reworked.fbx-d5295ef504dbbe2a8e704349825bf064.scn"
 
 [deps]
 
-source_file="res://assets/3D/models/fbx/player_model_reworked.fbx"
-dest_files=["res://.godot/imported/player_model_reworked.fbx-dca7ddba6dc4e0d58c33f2de033ef32f.scn"]
+source_file="res://resources/fbx/player_model_reworked.fbx"
+dest_files=["res://.godot/imported/player_model_reworked.fbx-d5295ef504dbbe2a8e704349825bf064.scn"]
 
 [params]
 
@@ -33,7 +33,7 @@ _subresources={
 "materials": {
 "ImphenziaPixPal": {
 "use_external/enabled": true,
-"use_external/path": "res://assets/materials/main_material.tres"
+"use_external/path": "res://resources/materials/main_material.tres"
 }
 }
 }

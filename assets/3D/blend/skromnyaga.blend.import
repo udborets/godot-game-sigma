@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://kqg5woc1fs6g"
-path="res://.godot/imported/skromnyaga.blend-8be09fa5c508e69a0716492820bd33f9.scn"
+path="res://.godot/imported/skromnyaga.blend-792df1b8b96a07caf1c5a7dbaa6b9a9c.scn"
 
 [deps]
 
-source_file="res://assets/3D/models/blend/skromnyaga.blend"
-dest_files=["res://.godot/imported/skromnyaga.blend-8be09fa5c508e69a0716492820bd33f9.scn"]
+source_file="res://assets/3D/blend/skromnyaga.blend"
+dest_files=["res://.godot/imported/skromnyaga.blend-792df1b8b96a07caf1c5a7dbaa6b9a9c.scn"]
 
 [params]
 
